@@ -22,15 +22,15 @@ _Encontras el bot funcionando en Telegram: @iamatranslaterbot_
 
 ### Construido con 🛠️
 
-* [JavaScript](https://www.javascript.com/) - JavaScript
-* [NodeJs](https://nodejs.org/es/) - NodeJs
-* [Heroku](https://www.heroku.com/) - Heroku
+* [JavaScript](https://www.javascript.com/) 
+* [NodeJs](https://nodejs.org/es/)
+* [Heroku](https://www.heroku.com/) 
 
 
-### APIs 📋
+### APIs utilizadas 📋
 
-* [RapidAPI](https://rapidapi.com/) - RapidAPI
-* [Telegram Bot API](https://core.telegram.org/bots/api) - Telegram Bot API
+* [RapidAPI](https://rapidapi.com/) 
+* [Telegram Bot API](https://core.telegram.org/bots/api)
 
 
 ---
