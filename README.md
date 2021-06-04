@@ -10,7 +10,6 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 ### Instalación 🔧
 
 ```
-git clone
 npm install
 npm start
 ```
