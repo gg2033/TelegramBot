@@ -1,19 +1,17 @@
-require('dotenv').config();
-const {
-  token, rapidapiKey
-} = process.env;
+require("dotenv").config();
+const { telegramApiToken, rapidapiKey } = process.env;
 
 const TelegramBot = require("node-telegram-bot-api");
 const fetch = require("node-fetch");
 const { URLSearchParams } = require("url");
 
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(telegramApiToken, { polling: true });
 
-//Inicializa el bot
+bot.onText(/^\/start/, function (msg) {
+  console.log(msg);
 
-bot.onText(/^\/start/, function(msg){
-  var chatId = msg.chat.id;
-  var username = msg.from.username;
+  const chatId = msg.chat.id;
+  const username = msg.from.username;
 
   bot.sendMessage(
     chatId,
@@ -40,20 +38,25 @@ const translater = (msg) => {
         "x-rapidapi-host": "google-translate1.p.rapidapi.com",
       },
       "body": body.toString(),
-    })
+    }
+  )
     .then(res => res.json())
     .then(response => {
-      return response.data.translations[0].translatedText;
+      return response.data&&data.translations[0].translatedText;
     })
     .catch(err => {
       console.error(err);
     });
 };
 
-bot.on('message', async function(msg) {
-  var chatId = msg.chat.id;
+bot.on("message", async function (msg) {
+  console.log(msg);
+
+  const chatId = msg.chat.id;
 
   const translation = await translater(msg.text);
-  
+
   bot.sendMessage(chatId, translation);
 });
+
+
