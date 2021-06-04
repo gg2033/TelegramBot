@@ -8,7 +8,6 @@ const { URLSearchParams } = require("url");
 const bot = new TelegramBot(telegramApiToken, { polling: true });
 
 bot.onText(/^\/start/, function (msg) {
-  console.log(msg);
 
   const chatId = msg.chat.id;
   const username = msg.from.username;
@@ -50,8 +49,7 @@ const translater = (msg) => {
 };
 
 bot.on("message", async function (msg) {
-  console.log(msg);
-
+  
   const chatId = msg.chat.id;
 
   const translation = await translater(msg.text);
