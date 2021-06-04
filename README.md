@@ -15,7 +15,7 @@ npm install
 npm start
 ```
 
-## Deployment 📦
+## El bot en acción ⚙️
 
 _Encontras el bot funcionando en Telegram: @iamatranslaterbot_
 
@@ -25,6 +25,13 @@ _Encontras el bot funcionando en Telegram: @iamatranslaterbot_
 * [JavaScript](https://www.javascript.com/) - JavaScript
 * [NodeJs](https://nodejs.org/es/) - NodeJs
 * [Heroku](https://www.heroku.com/) - Heroku
+
+
+## APIs 📋
+
+* [RapidAPI](https://rapidapi.com/) - RapidAPI
+* [Telegram Bot API](https://core.telegram.org/bots/api) - Telegram Bot API
+
 
 ---
 ⌨️ con ❤️ por [Victoria Coronado](https://github.com/viccoronado) 😊
