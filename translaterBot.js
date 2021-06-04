@@ -1,8 +1,12 @@
+require('dotenv').config();
+const {
+  token, rapidapiKey
+} = process.env;
+
 const TelegramBot = require("node-telegram-bot-api");
 const fetch = require("node-fetch");
 const { URLSearchParams } = require("url");
 
-const token = "1761621470:AAEeCrK_TGjboC8yogsCsiaqnTE3Qakk6aM";
 const bot = new TelegramBot(token, { polling: true });
 
 //Inicializa el bot
@@ -32,7 +36,7 @@ const translater = (msg) => {
       "headers": {
         "content-type": "application/x-www-form-urlencoded",
         "accept-encoding": "application/gzip",
-        "x-rapidapi-key": "250f1d4343msh0c8d55a6ce658dap16bb9cjsn3655f6aed22c",
+        "x-rapidapi-key": rapidapiKey,
         "x-rapidapi-host": "google-translate1.p.rapidapi.com",
       },
       "body": body.toString(),
