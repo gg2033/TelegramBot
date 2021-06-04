@@ -32,5 +32,4 @@ _Encontras el bot funcionando en Telegram: @iamatranslaterbot_
 * [Telegram Bot API](https://core.telegram.org/bots/api)
 
 
----
-⌨️ con ❤️ por [Victoria Coronado](https://github.com/viccoronado) 😊
+
