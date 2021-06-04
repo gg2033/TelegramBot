@@ -42,7 +42,7 @@ const translater = (msg) => {
   )
     .then(res => res.json())
     .then(response => {
-      return response.data&&data.translations[0].translatedText;
+      return response.data.translations[0].translatedText;
     })
     .catch(err => {
       console.error(err);
