@@ -15,8 +15,6 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
- //const bot = new TelegramBot(telegramApiToken, { polling: true });
-
 
 bot.onText(/^\/start/, function (msg) {
 
