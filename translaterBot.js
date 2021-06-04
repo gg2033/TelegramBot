@@ -1,12 +1,21 @@
 require("dotenv").config();
-const { telegramApiToken, rapidapiKey, HEROKU_URL } = process.env;
+const { telegramApiToken, rapidapiKey} = process.env;
 
 const TelegramBot = require("node-telegram-bot-api");
 const fetch = require("node-fetch");
 const { URLSearchParams } = require("url");
 
+if(process.env.NODE_ENV === 'production') {
+  bot = new TelegramBot(telegramApiToken);
+  bot.setWebHook(process.env.HEROKU_URL + bot.telegramApiToken);
+}
+else {
+  bot = new TelegramBot(telegramApiToken, { polling: true });
+}
 
- const bot = new TelegramBot(telegramApiToken, { polling: true });
+console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
+
+ //const bot = new TelegramBot(telegramApiToken, { polling: true });
 
 
 bot.onText(/^\/start/, function (msg) {
