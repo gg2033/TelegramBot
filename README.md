@@ -1,5 +1,5 @@
 # Telegram Bot: @iamatranslaterbot
-_Bot de Telegram desarrollado con NodeJS para traducir el texto recibido desde el idioma español al inglés_
+_Bot de Telegram desarrollado con NodeJS para traducir el texto recibido de español a inglés_
 
 
 ## Comenzando 🚀
