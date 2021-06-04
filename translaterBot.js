@@ -7,6 +7,7 @@ const { URLSearchParams } = require("url");
 
 const bot = new TelegramBot(telegramApiToken, { polling: true });
 
+
 bot.onText(/^\/start/, function (msg) {
 
   const chatId = msg.chat.id;
